@@ -29,7 +29,7 @@ Yours Sincerely,
         btn = st.download_button(
             label="Download Now",
             data=file,
-            file_name="Generated_Resume.docx",
+            file_name="generatedLetter.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           )
 def home_faculty():
