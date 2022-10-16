@@ -80,11 +80,11 @@ def letter():
         st.markdown("""
         
         ## Team Members :-
-        1. Ram Badan Pandey
-        2. Rohit Kumar Pandey
-        3. Saif Mohammad
-        4. Subodh Dubey
-        5. Suryansh Katiyar
+        1. Ram Badan Pandey (2101430100141)
+        2. Rohit Kumar Pandey (2101430100145)
+        3. Saif Mohammad (2101430100150)
+        4. Subodh Dubey (2101430100177)
+        5. Suryansh Katiyar (2101430100180)
         """)
     if selected == "About":
         st.markdown("We Are Here To ")
