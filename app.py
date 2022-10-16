@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from docx import Document
+from PIL import Image
 def downloadNow_faculty(data):
     file = Document()
     file.add_paragraph("{},".format(data["receiver"]))
@@ -18,7 +19,7 @@ def downloadNow_faculty(data):
     file.add_paragraph("I shall be reachable on my mobile number and email during the period. My person in charge, {} will be handling my tasks in my absence.".format(person_name))
     file.add_paragraph("""I will be thankful to you for considering my application.
     
-    
+
 Yours Sincerely,
     
 {}""".format(Name))
@@ -73,7 +74,7 @@ def letter():
     if selected == "Contact Us":
         st.markdown("""
         ## YOU CAN CONTACT ME -
-        Instagram : mrtechnostart                        
+        Instagram : mrtechnostart(Ram Badan Pandey)                  
         Email Id : rambpandey238@gmail.com
         """)
         st.text("IMS Engineering College, IMS Hostel, Ghaziabad Varanasi")
@@ -88,4 +89,15 @@ def letter():
         """)
     if selected == "About":
         st.markdown("We Are Here To ")
+def hideFooter():
+    with Image.open("favicon.ico") as icon:
+        st.set_page_config(page_title="ApploGen(beta)",page_icon=icon)
+    hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+hideFooter()
 letter()
