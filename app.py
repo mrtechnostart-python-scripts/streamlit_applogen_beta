@@ -68,7 +68,8 @@ def letter():
         orientation="horizontal"
         )
     if selected=="Home":
-        st.markdown("Hello EveryOne")
+        st.markdown('''Hello
+        EveryOne''')
     if selected=="Leave Application":
         home_faculty()
     if selected == "Contact Us":
@@ -88,7 +89,7 @@ def letter():
         5. Suryansh Katiyar (2101430100180)
         """)
     if selected == "About":
-        st.markdown("We Are Here To ")
+        st.markdown('''We Are Here To Create Application ''')
 def hideFooter():
     with Image.open("favicon.ico") as icon:
         st.set_page_config(page_title="ApploGen(beta)",page_icon=icon)
