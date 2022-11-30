@@ -69,7 +69,20 @@ def letter():
         )
     if selected=="Home":
         st.markdown('''Hello
-        EveryOne''')
+        EveryOne 
+        
+The formal letter generater is a tool that
+can help quickly and easily construct a 
+formal letter. 
+
+Imagine this scenario: You need send a formal
+to your employer or institution. This letter
+needs to have the appropriate tone and style.
+
+THANK YOU
+
+
+''')
     if selected=="Leave Application":
         home_faculty()
     if selected == "Contact Us":
