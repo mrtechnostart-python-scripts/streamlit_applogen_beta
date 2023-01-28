@@ -16,7 +16,7 @@ def downloadNow_faculty(data):
     no_of_day = dateTime.dateSubtract(end)
     person_name = data["person_name"]
     Name = data["Name"]
-    file.add_paragraph("I am writing to ask you for a {} days leave from {} to {} due to {} . I am going to resume work from {}.".format(no_of_day,starting,end,reason,end))
+    file.add_paragraph("I am writing to ask you for a {} leave from {} to {} due to {} . I am going to resume work from {}.".format(no_of_day,starting,end,reason,end))
     file.add_paragraph("I shall be reachable on my mobile number and email during the period. My person in charge, {} will be handling my tasks in my absence.".format(person_name))
     file.add_paragraph("""I will be thankful to you for considering my application.
     
