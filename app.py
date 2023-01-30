@@ -58,24 +58,22 @@ def letter():
     selected = option_menu(
         menu_title="Main Menu",
         options=["Home","Leave Application","About","Contact Us"],
-        icons=["house","book","envelop","contact"],
+        icons=["house","book","gear","contact"],
         menu_icon="cast",
         orientation="horizontal"
         )
     if selected=="Home":
-        st.markdown('''Hello
-        EveryOne 
-        
-The formal letter generater is a tool that
-can help quickly and easily construct a 
-formal letter. 
+        st.markdown('''### Hello Everyone,
 
-Imagine this scenario: You need send a formal
-to your employer or institution. This letter
-needs to have the appropriate tone and style.
+The formal letter generator is a highly useful tool that can assist individuals in composing a professional and well-crafted formal letter. Whether you need to send a letter to your employer, a university or any other institution, this tool can help you create a letter that is both appropriate and effective.
 
-THANK YOU
+In today's fast-paced world, time is a valuable commodity and the formal letter generator provides a quick and convenient solution for those who need to send a formal letter. With just a few clicks, you can easily construct a letter that follows the correct tone and style for the intended recipient.
 
+Additionally, the formal letter generator can also help to ensure that all the necessary information is included in the letter, such as the date, recipient's address, and the sender's signature.
+
+In conclusion, the formal letter generator is an invaluable tool for anyone who needs to send a professional and well-written formal letter.
+
+Thank you.
 
 ''')
     if selected=="Leave Application":
@@ -97,7 +95,23 @@ THANK YOU
         5. Suryansh Katiyar (2101430100180)
         """)
     if selected == "About":
-        st.markdown('''We Are Here To Create Application ''')
+        st.markdown('''### Here is a revised overview of our Python project:
+
+A Formal Application Generator that utilizes the Streamlit library for its frontend interface, and the python-docx library for document generation. This project aims to automate the creation of formal applications and make the process more efficient and streamlined. With Streamlit's user-friendly interface, the application will provide an easy-to-use interface for users to input the required information and generate a professional-looking formal application. The final document will be generated using the python-docx library.
+
+### Goals and Objectives:
+
+To automate the creation of formal applications
+To simplify the application creation process
+To provide a user-friendly interface for inputting data
+To generate professional-looking documents with the help of python-docx
+
+
+### Features:
+
+A Streamlit-based interface for data input
+The ability to generate a professional-looking formal application using python-docx
+This project has the potential to greatly streamline the formal application process, saving users time and effort, and resulting in a polished, professional-looking final product.''')
 def hideFooter():
     with Image.open("favicon.ico") as icon:
         st.set_page_config(page_title="ApploGen(beta)",page_icon=icon)
