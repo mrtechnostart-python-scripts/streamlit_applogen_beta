@@ -8,4 +8,4 @@ def dateSubtract(lastDate):
         newStr+=data[i]
     return (newStr[::-1])
 if __name__ == "__main__":
-    print(dateSubtract("3025-11-24"))
+    print(dateSubtract("2022-11-24"))

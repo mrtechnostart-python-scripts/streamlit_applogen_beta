@@ -4,6 +4,7 @@ from docx import Document
 from PIL import Image
 import datetime
 import dateTime
+from streamlit.components.v1 import html
 def downloadNow_faculty(data):
     file = Document()
     file.add_paragraph("{},".format(data["receiver"]))
@@ -33,6 +34,8 @@ Yours Sincerely,
             file_name="generatedLetter.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           )
+    st.markdown('''<a href="mailto:{}" style=text-decoration:none;color:red;>Mail Now!</a>'''.format(data["mail"]), unsafe_allow_html=True)
+
 def home_faculty():
     name= st.text_input("Name")
     receiver = st.text_area("Receiver Details")
@@ -40,6 +43,7 @@ def home_faculty():
     date1 = str(st.date_input("Enter the starting date"))
     date2 = str(st.date_input("Enter the last date date"))
     reason = st.text_area("Enter The Reason ")
+    mail = st.text_input("Enter Email Address")
     person_name = st.text_input("Enter the name of the person who can represent you, during leave")
     if st.button("Submit"):
         datadict = {
@@ -49,7 +53,8 @@ def home_faculty():
         "receiver" : receiver,
         "subject" : subject,
         "reason" : reason,
-        "person_name" : person_name
+        "person_name" : person_name,
+        "mail" : mail
     }
         downloadNow_faculty(datadict)
 def letter():
