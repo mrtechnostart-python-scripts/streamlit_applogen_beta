@@ -17,7 +17,7 @@ def downloadNow_faculty(data):
     no_of_day = dateTime.dateSubtract(end)
     person_name = data["person_name"]
     Name = data["Name"]
-    String = "Sir/Ma'am%0AI am writing to ask you for a {} leave from {} to {} due to {} . I am going to resume work from {}.%0AI shall be reachable on my mobile number and email during the period. My person in charge, {} will be handling my tasks in my absence.%0AI will be thankful to you for considering my application.%0A%0A%0A%0AYours Sincerely,%0A%0A{}".format(no_of_day,starting,end,reason,end,person_name,Name)
+    String = "Sir/Ma'am%0A%0A%0AI am writing to ask you for a {} leave from {} to {} due to {} . I am going to resume work from {}.%0AI shall be reachable on my mobile number and email during the period. My person in charge, {} will be handling my tasks in my absence.%0AI will be thankful to you for considering my application.%0A%0A%0AYours Sincerely,%0A%0A{}".format(no_of_day,starting,end,reason,end,person_name,Name)
     file.add_paragraph("I am writing to ask you for a {} leave from {} to {} due to {} . I am going to resume work from {}.".format(no_of_day,starting,end,reason,end))
     file.add_paragraph("I shall be reachable on my mobile number and email during the period. My person in charge, {} will be handling my tasks in my absence.".format(person_name))
     file.add_paragraph("""I will be thankful to you for considering my application.
@@ -35,7 +35,7 @@ Yours Sincerely,
             file_name="generatedLetter.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           )
-    st.markdown('<a href="mailto:{}?subject={}!&body={}">Mail Now!!</a>'.format(data["mail"],data["subject"],String), unsafe_allow_html=True)
+    st.markdown('<a href="mailto:{}?subject={}!&body={}" style="background-color: blue;color: white;padding: 8px 12px;text-decoration: none;border-radius: 5px;display: inline-block;">Mail Now!!</a>'.format(data["mail"],data["subject"],String), unsafe_allow_html=True)
 
 def home_faculty():
     name= st.text_input("Name")
