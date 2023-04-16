@@ -4,5 +4,5 @@ It's a streamlit App, which will help you to generate formal leave application(i
 
 to run
 ```
-streamlit run main.py
+streamlit run app.py
 ```
